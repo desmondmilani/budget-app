@@ -1,0 +1,27 @@
+.AddItem {
+    display: grid;
+    width: 500px;
+    border: 2px solid #777;
+    padding: 20px;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+input {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    background-color: white;
+}
+
+button {
+    font-size: 1.4em;
+    justify-self: left;
+    margin-left: 50px;
+    width: 100px;
+}
+
+select {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,15 @@
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.DisplayTransactions div {
+    display: grid;
+    width: 500px;
+    grid-template-columns: 8fr 8fr 1fr;
+    border: 2px solid grey;
+    padding: 15px;
+}
