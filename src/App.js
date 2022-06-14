@@ -1,9 +1,11 @@
 import React, { ReactDom } from 'react';
 import { useState } from 'react';
 import './App.css';
-import AddItem from './components/AddItem';
 import Transaction from "./myClasses/Transaction"
-import DisplayTransactions from './components/DisplayTransactions';
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import Login from "./components/login";
+import Signup from "./components/signup";
+import Home from './components/home';
 
 function App() {
   const [transactions, setTransactions] = useState([]);
@@ -13,10 +15,13 @@ function App() {
     setTransactions([...transactions, transaction])
   }
   return (
-    <div className="Container">
-      <DisplayTransactions transactions = {transactions} />
-      <AddItem addTransaction={addTransaction} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path='/home' element={<Home addTransaction={addTransaction} transactions={transactions} />} />
+      </Routes>
+    </Router>
   );
 }
 
